@@ -21,6 +21,7 @@ The Mean = 10766.19 and The medina = 10765
 Calculate average steps for each interval for all days.
 Plot the Average Number Steps per Day by Interval.
 Find interval with most average steps.
+
 steps_by_interval <- aggregate(steps ~ interval, data, mean)
 plot(steps_by_interval$interval,steps_by_interval$steps, type="l", xlab="Interval", ylab="No. of Steps",main="Avg. No. of Steps per Day by Interval" )
 max_interval <- steps_by_interval[which.max(steps_by_interval$steps),1]
